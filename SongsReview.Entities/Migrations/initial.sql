@@ -29,12 +29,13 @@ CREATE TABLE [User] (
 
 CREATE TABLE Review (
 	ReviewId INT IDENTITY(1,1) PRIMARY KEY,
-	Review TEXT,
+	Review TEXT NOT NULL,
 	CreatedAt DATETIMEOFFSET NOT NULL,
 	UpdatedAt DATETIMEOFFSET NOT NULL,
 	Username VARCHAR(16) FOREIGN KEY REFERENCES [User](Username),
 	SongId INT FOREIGN KEY REFERENCES Song(SongId)
 )
+
 
 -------------------------------- INSERTION --------------------------------
 

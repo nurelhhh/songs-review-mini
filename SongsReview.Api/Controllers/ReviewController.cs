@@ -59,6 +59,7 @@ namespace SongsReview.Api.Controllers
             }
 
             check.Review1 = model.NewReview;
+            check.UpdatedAt = DateTimeOffset.Now;
 
             try
             {
